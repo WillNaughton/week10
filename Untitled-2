@@ -1,0 +1,14 @@
+create procedure emp_name_title()
+select employees.first_name, employees.last_name, titles.title from employees
+inner join titles on titles.emp_no = employees.emp_no;
+
+create procedure title_salary()
+select salaries.salary, titles.title from salaries
+inner join titles on titles.emp_no = salaries.emp_no
+group by titles.title;
+
+create procedure emp_name_title()
+select employees.first_name, employees.last_name, titles.title from employees
+inner join titles on titles.emp_no = employees.emp_no;
+
+create procedure
